@@ -1,5 +1,3 @@
-import sys 
-import os
 import urllib
 
 import yaml
@@ -17,7 +15,8 @@ def index():
         
 CONFIG = {"API_KEY": "771df488714111d39138eb60df756e6b"}
 
-class Person(object):
+
+class Person:
     def __init__(self, name):
         self.name = name
 
@@ -33,7 +32,6 @@ def fetch_website(urllib_version, url):
  
     try: 
         http = urllib.PoolManager()
-        r = http.request('GET', url)
     except:
         print('Exception')
 
